@@ -71,8 +71,7 @@ const userSchema = new mongoose.Schema({
   }
 });
 
-// Index pour optimiser les recherches
-userSchema.index({ phone: 1 });
+// Index pour optimiser les recherches (pas de doublon sur phone)
 userSchema.index({ lastName: 1 });
 userSchema.index({ type: 1 });
 userSchema.index({ isActive: 1 });
